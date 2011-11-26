@@ -1,0 +1,24 @@
+compile
+help
+project
+get name
+show name
+show dependencies
+show project-dependencies
+show project-resolver
+show project-descriptors
+compile
+help build
+help build-all
+compile
+~compile
+compile
+~ compile
+compile
+exit
+~ test-compile
+compile
+test
+test compile
+test-compile
+~ test

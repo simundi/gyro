@@ -41,7 +41,10 @@
         
         <p><input name="login" value="Login" type="submit"></p>
       </form>
-
+      
+      <a href="">Google Account</a>
+	  <a href="facebook">Facebook Account</a>
+	  
   </div>
 </div>
 </body>

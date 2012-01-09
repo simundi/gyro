@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.simundi</groupId>
-	<artifactId>common-authenticatio</artifactId>
+	<artifactId>common-authentication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>common-authenticatio</name>
+	<name>common-authentication</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -40,6 +40,13 @@
 			<version>${spring.version}</version>
 		</dependency>
 
+		<!-- Jackson (JSON) -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.5.5</version>
+		</dependency>
+		
 		<!-- Spring Security -->
 		<dependency>
 			<groupId>org.springframework.security.oauth</groupId>

@@ -1,26 +1,30 @@
-<%@page contentType="text/html;charset=UTF-8"%>
-<%@page pageEncoding="UTF-8"%>
-<%@ page session="false" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page import="org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter" %>
+<%@ page import="org.springframework.security.core.AuthenticationException" %>
+<%@ taglib prefix="authz" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
 
-<html>
+<authz:authorize ifAllGranted="ROLE_USER">
+  <c:redirect url="index.jsp"/>
+</authz:authorize>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-	<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<title>Profile Info</title>
-</head>	
+  <link href="<c:url value="/resources/main.css"/>" rel="stylesheet" type="text/css"/>
+  <title>Sample App</title>
+</head>
 <body>
 <div id="container">
 
     <ul id="mainlinks">
       <li><a href="home">home</a></li>
-      <li><a href="login">login</a></li>
-      <li><a href="profile" class="selected">profile info</a></li>
+      <li><a href="login" class="selected">login</a></li>
+      <li><a href="profile">profile info</a></li>
     </ul>
 
   <div id="content">
-    Profile INfo
+      <h1>Profile Info</h1>
   </div>
 </div>
 </body>

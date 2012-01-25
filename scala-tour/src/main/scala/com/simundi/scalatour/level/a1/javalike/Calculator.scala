@@ -4,10 +4,10 @@ package com.simundi.scalatour.level.a1.javalike
 
 class Calculator{
  
- var value:Float = 0 
+  var value:Float = 0 
    
-  def divide(val1:Int , val2:Int):Float ={
-    val1 / val2
+    def divide(val1:Int , val2:Int):Float ={
+      val1 / val2
   }
   
   def multiply(val1:Int , val2:Int):Int ={

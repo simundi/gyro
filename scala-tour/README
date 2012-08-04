@@ -1,8 +1,7 @@
 
-The idea here is explore the the Scala languague based on the Odersky's post where he piont out some 'levels'.
+The idea here is explore the the Scala languague based on the Odersky's post where he pionts out some 'levels'.
 
 I'm not here to discuss if that structure is the best organization of the levels or not. To be honest, I don't care.
-
 
 I just wanna a reference to START learn and is that what the post gives to us. So, let's go for it.
 
@@ -53,7 +52,23 @@ Level L3: Expert library designer
   - Higher-kinded types
 
 
+Studies Memories.
 
+Loops
+ - "to" vs "until" - to includes the last value in the range, whereas until leaves it out.
+ 
+ Test
+ - "===" when using assertions shows a better message.
+ 
+ Operators
+ - "===" use type coercion, which validates the type as well.
+ 
+ Classes
+ - When creating constructors, isn't possible assign null to an "Int" attribute, but is possible when it's a "Integer".
+ - If an attribute declared it he class signature, doesn't have var/val before the variable, it'll be visible only with the class, not outside
+
+http://alblue.bandlem.com/2007/10/scala-introduction-to-scala-creating.html
+http://joelabrahamsson.com/entry/learning-scala-classes-and-constructors
 
 
 

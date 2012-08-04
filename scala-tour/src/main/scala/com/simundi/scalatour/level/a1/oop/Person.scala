@@ -1,14 +1,17 @@
 package com.simundi.scalatour.level.a1.oop
 
-class Person{
+/**
+ * Defining Person attributes within the class declaration. 
+ * 
+ * it'll create a constructor using all the parameters defined.
+ * 
+ *  
+ *  
+ */
+class Person (var name:String, var age:Integer, var height:Float, var weight:Float){
 
-    var name:String = null
-    var age:Int = 0
-    var height:Float = 0
-    var weight:Float = 0
-    
-    
-    
+	def this() = this(null , null , 0.0f, 0.0f)
+  
     override def toString() = {
         "name= " + name + "\n" +
         "age= " + age + "\n" +

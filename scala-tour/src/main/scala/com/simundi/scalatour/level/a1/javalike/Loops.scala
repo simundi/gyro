@@ -2,6 +2,9 @@
 
 object Loops{
 
+  /**
+   * Using 'until'
+   */
   def contactWithComma(args:Array[String]):String = {
     var concatenatedArray = ""
     
@@ -13,15 +16,18 @@ object Loops{
     
   }
 
+  /**
+   * Using TO 
+   */
   def contactWithSpace(args:Array[String]):String = {
     var concatenatedArray = ""
     
-    for i in 0 .. 3 {
-      concatenatedArray += (args(i) + ",")
+    for (i <- 0 to 3 ) {
+    	concatenatedArray += (args(i) + " ")
     }
     
-    concatenatedArray
     
-  }
+    concatenatedArray
+   }
     
 }

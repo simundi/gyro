@@ -7,8 +7,7 @@ class ObjectOrientedProgrammingTest extends FunSuite{
 
     test("Test new  class like java"){
             
-        var p:Person = new Person ("Alex", 27 ,1.83f, 96)
-        
+        var p = new Person ("Alex", 27 ,1.83f, 96)
         assert(p.name === "Alex")
         assert(p.age === 27)
         assert(p.height === 1.83f)
@@ -31,16 +30,20 @@ class ObjectOrientedProgrammingTest extends FunSuite{
     }
     
     test("Test Construct sub class"){
-            
-        var p:Person = new Employee ("Alex", 27 ,1.83f, 96)
-        
-        
-        
+        var p = new Employee ("Alex", 27 ,1.83f, 96)
         assert(p.name === "Alex")
         assert(p.age === 27)
         assert(p.height === 1.83f)
         assert(p.weight === 96)         
+    }
     
-    }  
+    test("Test auxiliary constructors"){
+        var p = new Person ("Alex")
+        assert(p.name === "Alex")
+        assert(p.age === 18)
+        assert(p.height === 1.75f)
+        assert(p.weight === 75)  
+    }    
+    
 
 }

@@ -64,11 +64,20 @@ Loops
  - "===" use type coercion, which validates the type as well.
  
  Classes
+ 
  - When creating constructors, isn't possible assign null to an "Int" attribute, but is possible when it's a "Integer".
  - If an attribute declared it he class signature, doesn't have var/val before the variable, it'll be visible only with the class, not outside
+ - The class fields are "public val" by default
+ - a auxiliary constructor can call only the constructors defined BEFORE its declaration
+ - Couldn't find a way to call super constructors.
+  
+ Good Blog: http://joelabrahamsson.com/entry/learning-scala-classes-and-constructors 
+ http://www.javabeat.net/2012/06/primary-auxiliary-constructors-scala/
+ http://www.javabeat.net/2012/07/inheritance-overriding-scala/
 
-http://alblue.bandlem.com/2007/10/scala-introduction-to-scala-creating.html
-http://joelabrahamsson.com/entry/learning-scala-classes-and-constructors
+
+
+
 
 
 

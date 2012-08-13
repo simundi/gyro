@@ -1,8 +1,12 @@
 package com.simundi.scalatour.level.a1.testing.imports
 
 import org.scalatest.FunSuite
-import com.simundi.scalatour.level.a1.imports.{ConstantsObject => Object1, ClassToImport => Class1, AnotherObjectToImport => Object2}
 import com.sun.org.apache.bcel.internal.classfile.ConstantObject
+import com.simundi.scalatour.level.a1.imports.{
+  ConstantsObject => Object1, 
+  ClassToImport => Class1, 
+  AnotherObjectToImport => Object2
+}
 
 class TestImportWholePackageChangingNames extends FunSuite{
 

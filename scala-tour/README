@@ -74,6 +74,16 @@ Loops
  Good Blog: http://joelabrahamsson.com/entry/learning-scala-classes-and-constructors 
  http://www.javabeat.net/2012/06/primary-auxiliary-constructors-scala/
  http://www.javabeat.net/2012/07/inheritance-overriding-scala/
+ 
+ Collection
+   - the default import is immutable classes. 
+   - mutable classes needs to be explicit imported and used.
+   
+Patter matching
+   - obviously, the order matters
+      
+   
+ 
 
 
 

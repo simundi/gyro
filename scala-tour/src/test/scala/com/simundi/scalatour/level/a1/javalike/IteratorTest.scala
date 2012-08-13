@@ -13,5 +13,5 @@ class IteratorTest extends FunSuite{
     var result = Loops.contactWithSpace(Array("0" , "1", "2" , "3"))
     assert( result === "0 1 2 3 ")     
   }
-
+  
 }

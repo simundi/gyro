@@ -55,7 +55,7 @@ Level L3: Expert library designer
 Studies Memories.
 
 Loops
- - "to" vs "until" - to includes the last value in the range, whereas until leaves it out.
+ - "to" vs "until" - 'to' includes the last value in the range, where 'until' leaves it out.
  
  Test
  - "===" when using assertions shows a better message.
@@ -70,6 +70,7 @@ Loops
  - The class fields are "public val" by default
  - a auxiliary constructor can call only the constructors defined BEFORE its declaration
  - Couldn't find a way to call super constructors.
+ - predicate functions = returned a Boolean value	
   
  Good Blog: http://joelabrahamsson.com/entry/learning-scala-classes-and-constructors 
  http://www.javabeat.net/2012/06/primary-auxiliary-constructors-scala/
@@ -78,6 +79,7 @@ Loops
  Collection
    - the default import is immutable classes. 
    - mutable classes needs to be explicit imported and used.
+   
    
 Patter matching
    - obviously, the order matters

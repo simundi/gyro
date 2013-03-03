@@ -17,7 +17,7 @@ class TestImportWholePackageChangingNames extends FunSuite{
   test("Class Import changing name"){
     assert( new Class1().anotherMethodWithBody === "Will it be returned???? yes motherfucker!!" )
   }
-
+  
   test("Import another object changing name"){
     assert( Object2.attributeTest === "Hell yeah.." )
   }  

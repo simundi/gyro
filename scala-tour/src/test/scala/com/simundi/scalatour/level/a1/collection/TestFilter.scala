@@ -19,7 +19,7 @@ class TestFilter extends FunSuite {
     
     def isEven(i:Int):Boolean = i % 2 ==0
     
-    val newList = list.filter( isEven _ )
+    val newList = list.filter( isEven(_))
     
     assert(newList === List(2,4,6,8,10))
     assert(list === List(1,2,3,4,5,6,7,8,9,10))

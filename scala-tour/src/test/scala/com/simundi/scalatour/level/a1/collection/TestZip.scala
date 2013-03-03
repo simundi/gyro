@@ -1,6 +1,9 @@
 package com.simundi.scalatour.level.a1.collection
 import org.scalatest.FunSuite
 
+/**
+ * use case] Returns a list formed from this list and another iterable collection by combining corresponding elements in pairs.
+ */
 class TestZip extends FunSuite {
 
   test("Aggregating two lists "){

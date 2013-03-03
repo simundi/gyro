@@ -4,6 +4,7 @@ object Loops{
 
   /**
    * Using 'until'
+   * 'until' excludes the last value in the range. 
    */
   def contactWithComma(args:Array[String]):String = {
     var concatenatedArray = ""
@@ -17,7 +18,8 @@ object Loops{
   }
 
   /**
-   * Using TO 
+   * Using TO
+   * 'TO'includes the last value in the range. Equivalent of "<="
    */
   def contactWithSpace(args:Array[String]):String = {
     var concatenatedArray = ""

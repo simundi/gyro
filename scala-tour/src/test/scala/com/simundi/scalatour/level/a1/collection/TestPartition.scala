@@ -3,6 +3,10 @@ import org.scalatest.FunSuite
 
 class TestPartition extends FunSuite{
 
+  /**
+   * Partitions this list in two lists according to a predicate.
+   * 
+   */
   test("Partition tests"){
     
     val list = List(1,2,3,4,5,6,7,8,9,10)

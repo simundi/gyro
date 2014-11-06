@@ -1,4 +1,3 @@
-
 scala-tour-maven/*
 
 lab/.DS_Store
@@ -7,3 +6,17 @@ lab/.DS_Store
 
 lab/samples/sparklr/*
 lab/samples/tonr/*
+
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+.idea
+
+

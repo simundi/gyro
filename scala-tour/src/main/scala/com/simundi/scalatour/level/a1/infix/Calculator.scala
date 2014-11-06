@@ -16,7 +16,4 @@ class Calculator(var currentValue: Double) {
     currentValue *= value
     this
   }
-
-  
-  
 }

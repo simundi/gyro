@@ -2,14 +2,13 @@ package com.simundi.scalatour.level.a1.testing.imports
 
 import org.scalatest.FunSuite
 import com.simundi.scalatour.level.a1.imports.{ClassToImport, AnotherObjectToImport}
+import com.simundi.scalatour.level.a1.imports.ConstantsObject._
 
 class TestImportSpecificClasses extends FunSuite{
 
-  /* it'll give a compilation error because ConstantsObject isn't being imported.
   test("Object Import"){
-    assert( ConstantsObject.methodTest === "Hello Import!!" )
+    assert( methodTest === "Hello Import!!" )
   }
-  */
   
   test("Class Import"){
     assert( new ClassToImport().anotherMethodWithBody === "Will it be returned???? yes motherfucker!!" )

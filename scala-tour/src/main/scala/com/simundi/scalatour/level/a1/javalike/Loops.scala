@@ -1,5 +1,3 @@
-
-
 object Loops{
 
   /**
@@ -12,9 +10,7 @@ object Loops{
     for (i <- 0 until args.length) {
       concatenatedArray += (args(i) + ",")
     }
-    
     concatenatedArray
-    
   }
 
   /**
@@ -24,12 +20,9 @@ object Loops{
   def contactWithSpace(args:Array[String]):String = {
     var concatenatedArray = ""
     
-    for (i <- 0 to 3 ) {
+    for (i <- 0 to args.length-1 ) {
     	concatenatedArray += (args(i) + " ")
     }
-    
-    
     concatenatedArray
    }
-    
 }

@@ -4,8 +4,8 @@ import org.scalatest.FunSuite
 class IteratorTest extends FunSuite{
 
   test("test FOR #1") {
-    var result = Loops.contactWithComma(Array("2" , "3"))
-    assert( result === "2,3,")     
+    var result = Loops.contactWithComma(Array("0", "1", "2" , "3"))
+    assert( result === "0,1,2,3,")     
   }
 
 

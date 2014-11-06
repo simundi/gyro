@@ -24,5 +24,4 @@ class TestInfix extends FunSuite{
     assert(calc.currentValue === 19)
   }  
   
-  
 }

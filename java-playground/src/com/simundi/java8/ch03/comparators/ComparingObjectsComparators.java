@@ -17,7 +17,6 @@ public class ComparingObjectsComparators {
             new Person("Nadia" , 20),
             new Person("Greg" , 30),
             new Person("Jane" , 29)
-
     );
 
 

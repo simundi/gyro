@@ -58,7 +58,7 @@ public class TestCollectors {
                 .stream()
                 .collect(
                         groupingBy(
-                                person -> person.getName().charAt(0),`
+                                person -> person.getName().charAt(0),
                                 reducing(BinaryOperator.maxBy(byAge))
                         )
                 );

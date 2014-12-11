@@ -22,7 +22,7 @@ public class TestComparisons {
 
             System.out.printf("\tLambda comparison: \t\t%s\n", lambdaComparison());
             System.out.printf("\tNormal comparison: \t\t%s\n", normalComparison());
-            System.out.printf("\tStream comparison: \t\t%s\n", normalComparison());
+            System.out.printf("\tStream comparison: \t\t%s\n", streamComparison());
         }
 
     }

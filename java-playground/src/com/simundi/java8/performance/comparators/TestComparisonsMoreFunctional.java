@@ -40,11 +40,6 @@ public class TestComparisonsMoreFunctional {
                     "Stream.sorted()",
                     text -> Stream.of(text).sorted((String o1, String o2) -> o1.compareTo(o2)).toArray()
             );
-            runAndMonitor(
-                    "Stream.parallel()",
-                    text -> Stream.of(text).parallel().sorted((String o1, String o2) -> o1.compareTo(o2)).toArray()
-            );
-
         }
 
     }

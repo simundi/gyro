@@ -1,16 +1,19 @@
 package com.simundi.java8.performance.comparators;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 import static com.simundi.java8.performance.comparators.TextDao.getArray;
+import static com.simundi.java8.performance.comparators.TextDao.getList;
 
 /**
  * Created by simundi on 11/12/2014.
  */
-public class TestComparisonsMoreFunctional {
+public class TestComparisonsLists {
 
 
     public static void main(String[] args) {
@@ -19,8 +22,8 @@ public class TestComparisonsMoreFunctional {
             System.out.println("Round #" + i);
 
             runAndMonitor(
-                    "Array.sort normal",
-                    text -> Arrays.sort(text, new Comparator<String>() {
+                    "Collections.sort normal",
+                    text -> Collections.sort(text, new Comparator<String>() {
                         @Override
                         public int compare(String o1, String o2) {
                             return o1.compareTo(o2);
@@ -29,14 +32,14 @@ public class TestComparisonsMoreFunctional {
             );
 
             runAndMonitor(
-                    "Array.sort(Lambda)",
-                    text -> Arrays.sort(text, (String o1, String o2) -> o1.compareTo(o2))
+                    "Collections.sort(Lambda)",
+                    text -> Collections.sort(text, (String o1, String o2) -> o1.compareTo(o2))
 
             );
 
             runAndMonitor(
-                    "Stream.sorted()",
-                    text -> Stream.of(text).sorted((String o1, String o2) -> o1.compareTo(o2)).toArray()
+                    "Stream.sorted(lambda exp)",
+                    text -> text.stream().sorted((String o1, String o2) -> o1.compareTo(o2)).toArray()
             );
         }
 
@@ -47,8 +50,8 @@ public class TestComparisonsMoreFunctional {
 
 
 
-    private static void runAndMonitor(String label , Consumer<String[]> sotringFunc){
-        final String[] text = getArray();
+    private static void runAndMonitor(String label , Consumer<List<String>> sotringFunc){
+        final List<String> text = getList();
         final long start = System.nanoTime();
         sotringFunc.accept(text);
         final long stop = System.nanoTime();

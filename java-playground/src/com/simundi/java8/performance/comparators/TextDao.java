@@ -3,6 +3,9 @@ package com.simundi.java8.performance.comparators;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by simundi on 11/12/2014.
@@ -10,7 +13,15 @@ import java.io.IOException;
 public class TextDao {
 
 
-    public static String[] getSplitText() {
+    public static List<String> getList() {
+        return Stream.
+                of(getText().split(" "))
+                .filter(str -> str.trim().isEmpty())
+                .collect(Collectors.toList());
+
+    }
+
+    public static String[] getArray() {
         return getText().split(" ");
     }
 

@@ -2,12 +2,9 @@ package com.simundi.java8.performance.comparators;
 
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-import static com.simundi.java8.performance.comparators.TextDao.getSplitText;
+import static com.simundi.java8.performance.comparators.TextDao.getArray;
 
 /**
  * Created by simundi on 11/12/2014.
@@ -29,7 +26,7 @@ public class TestComparisons {
 
     private static long normalComparison() {
 
-        final String[] text = getSplitText();
+        final String[] text = getArray();
         final long start = System.nanoTime();
         Arrays.sort(text, new Comparator<String>() {
             @Override
@@ -42,7 +39,7 @@ public class TestComparisons {
     }
 
     private static long lambdaComparison() {
-        final String[] text = getSplitText();
+        final String[] text = getArray();
         final long start = System.nanoTime();
         Arrays.sort(text, (String o1, String o2) -> o1.compareTo(o2));
         final long stop = System.nanoTime();
@@ -50,7 +47,7 @@ public class TestComparisons {
     }
 
     private static long streamComparison() {
-        final String[] text = getSplitText();
+        final String[] text = getArray();
         final long start = System.nanoTime();
         Stream.of(text).sorted((String o1, String o2) -> o1.compareTo(o2)).toArray();
         final long stop = System.nanoTime();

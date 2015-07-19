@@ -1,4 +1,4 @@
-scala-tour-maven/*
+hadoop-book
 
 lab/.DS_Store
 
@@ -19,4 +19,9 @@ lab/samples/tonr/*
 
 .idea
 
+/**/target/*
 
+*.iml
+
+id_rsa
+id_rsa.pub

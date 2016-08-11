@@ -6,16 +6,12 @@ import static com.simundi.java7.stringswtich.SillyClass.print;
 
 /**
  * Created by simundi on 02/11/2014.
- *
+ * <p>
  * Link reference: http://www.oracle.com/technetwork/articles/java/trywithresources-401775.html
- *
+ * <p>
  * Needs to Implement AutoClose interface: http://docs.oracle.com/javase/7/docs/api/java/lang/AutoCloseable.html
- *
- *
- *
  */
 public class PlayingWithFiles {
-
 
 
     public void newStyle() throws IOException {
@@ -24,12 +20,12 @@ public class PlayingWithFiles {
         file.createNewFile();
         print("File created: " + file.getAbsolutePath());
 
-        try(
-                BufferedReader oldFile = new BufferedReader(new FileReader("data-old.txt") );
-                DataOutputStream newFIle = new DataOutputStream( new FileOutputStream(file) );
-                ){
+        try (
+            BufferedReader oldFile = new BufferedReader(new FileReader("data-old.txt"));
+            DataOutputStream newFIle = new DataOutputStream(new FileOutputStream(file));
+        ) {
 
-            while(oldFile.ready()){
+            while (oldFile.ready()) {
                 newFIle.writeChars(oldFile.readLine());
                 newFIle.writeChars("\n");
             }
@@ -46,7 +42,9 @@ public class PlayingWithFiles {
             file.createNewFile();
             print("File created: " + file.getAbsolutePath());
             out = new DataOutputStream(new FileOutputStream(file));
-            for (String line:data)out.writeChars(line + "\n");
+            for (String line : data) {
+                out.writeChars(line + "\n");
+            }
         } finally {
             if (out != null) {
                 out.close();
@@ -54,11 +52,11 @@ public class PlayingWithFiles {
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         PlayingWithFiles playingWithFiles = new PlayingWithFiles();
 
         try {
-            playingWithFiles.oldStyleFileWriting("Soneto do Amor Total" , "", "Amo-te tanto, meu amor... não cante");
+            playingWithFiles.oldStyleFileWriting("Soneto do Amor Total", "", "Amo-te tanto, meu amor... não cante");
             playingWithFiles.newStyle();
 
         } catch (IOException e) {

@@ -20,6 +20,11 @@ public class PickingUpElement {
 
         System.out.format("Name found with letter A: %s%n", foundName.orElse("name not found"));
 
+        final long count = friends
+            .stream()
+            .filter(name -> name.startsWith("A"))
+            .count();
+
 
         //Map to Int
         System.out.format("Total number of characters: %s%n",

@@ -32,6 +32,8 @@ public class InteratingThroughLIst {
 
         System.out.println("Method reference====");
         friends.forEach(System.out::println);
+
+
     }
 
 }
